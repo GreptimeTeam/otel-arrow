@@ -14,7 +14,7 @@ use std::path::Path;
 
 fn main() {
     let out_dir = Path::new("src/proto");
-    let base = std::env::var("CARGO_MANIFEST_DIR").unwrap_or_else(|_| ".".to_string());
+    let base = ".".to_string();
     let builder = tonic_build::configure()
         .build_server(true)
         .build_client(true);
